@@ -37,5 +37,5 @@ function rightSize (child, ride) {
   }
 }
 
-console.log(rightSize(child, ride));
-console.log(rightSize(child2, ride2));
+// console.log(rightSize(child, ride));
+// console.log(rightSize(child2, ride2));

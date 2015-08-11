@@ -8,32 +8,24 @@ var Car = function (mpg, gallons) {
   this.gallons = gallons;
 };
 
-
 var Route = function (miles, destination, location) {
   this.miles = miles;
   this.destination = destination;
   this.location = location;
 };
 
-//instances
-var truck = new Car (11, 5);
-console.log(truck);
 
-var sedan = new Car (20, 10);
+var truck = new Car(10, 20);
+var sedan = new Car(30, 10);
+var boulder = new Route(50, "Folsom", "Boulder, CO");
+var coloSprings = new Route (75, "Garden", "CS, CO");
 
-var route = new Route (30, "LoDo", "Denver, CO");
-
-var route1 = new Route ( 700, "MGM Grand", "Las Vegas, NV");
-
-
-function miles (car, route) {
-  if ((car.mpg*car.gallons) >= route.miles) {
+function enoughGas (car, route) {
+  if ((car.mpg*car.gallons) > route.miles) {
     return true;
   } else {
     return false;
   }
+
 }
-
-console.log(miles(truck, route));
-console.log(miles(truck, route1));
-
+console.log(enoughGas(truck,boulder));
